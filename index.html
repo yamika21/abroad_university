@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study MBBS Abroad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Hero Section -->
+    <header class="bg-blue-600 text-white text-center py-12 bg-cover bg-center"
+        style="background-image: url('bgg.jpeg');">
+        <h1 class="text-4xl font-bold">Study MBBS Abroad</h1>
+        <p class="mt-2">Your gateway to an international medical career</p>
+        <a href="#lead-form"
+            class="mt-4 inline-block bg-yellow-500 text-black px-6 py-3 text-lg font-semibold rounded-lg shadow-lg">
+            Apply Now
+        </a>
+    </header>
+
+    <!-- Why Study MBBS Abroad -->
+    <section class="container mx-auto px-6 py-10 text-center">
+        <h2 class="text-2xl font-semibold">Why Study MBBS Abroad?</h2>
+        <p class="mt-4 text-gray-700">Affordable tuition, globally recognized degrees, world-class infrastructure, and
+            diverse career opportunities.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            <div class="p-4 bg-white shadow rounded-lg">
+                <h3 class="font-semibold">Affordable Education</h3>
+                <p class="text-gray-600">Lower tuition fees compared to private colleges.</p>
+            </div>
+            <div class="p-4 bg-white shadow rounded-lg">
+                <h3 class="font-semibold">Global Recognition</h3>
+                <p class="text-gray-600">Degrees accepted worldwide.</p>
+            </div>
+            <div class="p-4 bg-white shadow rounded-lg">
+                <h3 class="font-semibold">Advanced Facilities</h3>
+                <p class="text-gray-600">Modern labs & clinical training.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Country Listings -->
+    <section class="container mx-auto px-6 py-10">
+        <h2 class="text-2xl font-semibold text-center">Top Countries for MBBS</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-6">
+            <div class="bg-white p-4 shadow rounded-lg text-center cursor-pointer"
+                onclick="window.location.href='russia-mbbs.html'">
+                <img src="russia.png" alt="Russia" class="w-full rounded">
+                <p class="mt-2 font-semibold">Russia</p>
+            </div>
+            <div class="bg-white p-4 shadow rounded-lg text-center cursor-pointer"
+                onclick="window.location.href='australia-mbbs.html'">
+                <img src="australia.png" alt="Australia" class="w-full rounded">
+                <h3 class="mt-2 font-semibold">Australia</h3>
+            </div>
+            <div class="bg-white p-4 shadow rounded-lg text-center cursor-pointer"
+                onclick="window.location.href='ukraine-mbbs.html'">
+                <img src="ukraine.png" alt="Ukraine" class="w-full rounded">
+                <h3 class="mt-2 font-semibold">Ukraine</h3>
+            </div>
+            <div class="bg-white p-4 shadow rounded-lg text-center cursor-pointer"
+                onclick="window.location.href='philippines-mbbs.html'">
+                <img src="philippines.png" alt="Philippines" class="w-full rounded">
+                <h3 class="mt-2 font-semibold">Philippines</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Process -->
+    <section class="bg-cover bg-center text-white py-10 text-center" style="background-image: url('bggg.jpeg');">
+        <h2 class="text-2xl font-semibold">Admission Process & Eligibility</h2>
+        <p class="mt-4 max-w-3xl mx-auto">Follow these simple steps to secure your seat:</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 max-w-5xl mx-auto">
+            <div class="p-4 bg-white text-gray-800 rounded-lg shadow">
+                <h3 class="font-semibold">Step 1: Choose a Country</h3>
+                <p>Select a university in your preferred destination.</p>
+            </div>
+            <div class="p-4 bg-white text-gray-800 rounded-lg shadow">
+                <h3 class="font-semibold">Step 2: Submit Documents</h3>
+                <p>Provide academic certificates, passport copy, and other required documents.</p>
+            </div>
+            <div class="p-4 bg-white text-gray-800 rounded-lg shadow">
+                <h3 class="font-semibold">Step 3: Get Admission Letter</h3>
+                <p>Receive your confirmation letter and proceed with visa processing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Generation Form -->
+    <section id="lead-form" class="container mx-auto px-6 py-10">
+        <h2 class="text-2xl font-semibold text-center">Get More Information</h2>
+        <form id="infoForm" class="bg-white p-6 mt-6 shadow-lg rounded-lg max-w-lg mx-auto bg-cover bg-center"
+            style="background-image: url('bgggg.jpg');">
+
+            <label class="block font-medium text-white">Name</label>
+            <input type="text" id="name" class="w-full border p-2 rounded mt-1" placeholder="Your Name" required>
+
+            <label class="block font-medium mt-4 text-white">Email</label>
+            <input type="email" id="email" class="w-full border p-2 rounded mt-1" placeholder="Your Email" required>
+
+            <label class="block font-medium mt-4 text-white">Phone</label>
+            <input type="tel" id="phone" class="w-full border p-2 rounded mt-1" placeholder="Your Phone" required>
+
+            <label class="block font-medium mt-4 text-white">Preferred Country</label>
+            <select id="country" class="w-full border p-2 rounded mt-1">
+                <option>Russia</option>
+                <option>Australia</option>
+                <option>Ukraine</option>
+                <option>Philippines</option>
+            </select>
+
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded mt-4 w-full">Submit</button>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById("infoForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevents form from refreshing the page
+
+            // Get form values
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let country = document.getElementById("country").value;
+
+            // Redirect to a new page with form data as URL parameters
+            window.location.href = `thank-you.html?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}&country=${encodeURIComponent(country)}`;
+        });
+    </script>
+
+</body>
+
+</html>
